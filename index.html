@@ -5,35 +5,25 @@
     <title>Document</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="fonts/glyphicons-halflings-regular.eot">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon%20.ico"/>
     <link rel="stylesheet" href="css/main.css">
-    
-    <script href="js/bootstrap.min.js"></script>
-    <script href="js/main.js"></script>
+
 </head>
 <body>
-    <div class="container">
-        <div id="titulo">TODO APP</div><br>
-        <form action="">
-        <textarea class="form-control" id="message-text" placeholder="Añade tu nueva tarea"></textarea><br> 
-        <button type="button" class="btn btn-primary" id="boton"><span class="glyphicon glyphicon-plus"> </span> Añadir Tarea</button>
-        </form>
-        <hr>
-        <div id="cuadro">
+	<div class="container">
+	    <div id="titulo">
+	        TODO APP
+	    </div><!--cierre de titulo--> <br>
+	    <div class="cuadro">
+	       <textarea id="mensaje" placeholder="Agrega tu Tarea"> </textarea><br><br>
+	        <button type="button" class="btn btn-primary" id="boton"><span class="glyphicon glyphicon-plus"></span> Añadir Tarea</button><br><br>
             <div class="row">
-                <div class="col-md-1 col-xs-1">
-                    <input type="checkbox" id="checkbox">
-                </div><!--cierre de col-md-1-->
-                <div class="col-md-10 col-xs-8">
-                    <ul>
-                        <li id="lista"> </li>
-                    </ul>
-                </div><!--cierre de col-md-10-->
-                <div class="col-md-1 col-xs-1">
-                    <span class="glyphicon glyphicon-trash" id="eliminar"></span>
-                </div><!--cierre de col-md-5-->
+                <div class="col-md-12 col-xs-12" id="tareas">
+                </div><!--cierre col-xs-12-->
             </div><!--cierre de row-->
-        </div><!--cierre de cuadro-->
+	    </div><!--cierre de cuadro-->
     </div><!--cierre de container-->
+	<!--Java Script-->
+	<script type='text/javascript' src='js/main.js'></script>
 </body>
 </html>
