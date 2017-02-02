@@ -15,11 +15,11 @@
 	        TODO APP 
 	    </div><!--cierre de titulo--> <br>
 	    <div class="cuadro">
-	       <textarea id="mensaje"> </textarea><br><br>
-	        <button type="button" class="btn btn-primary" id="boton"><span class="glyphicon glyphicon-plus"></span> Añadir Tarea</button><br><br>
+	       <textarea id="mensaje" placeholder="Agregar Tarea"> </textarea><br><br>
+	        <button type="button" class="btn btn-primary" id="boton" onclick="drawTextList()"><span class="glyphicon glyphicon-plus"></span> Añadir Tarea</button><br><br>
             <div class="row">
-                <div class="col-md-12 col-xs-12" id="tareas">
-                </div><!--cierre col-xs-12-->
+                <ul class="col-md-12 col-xs-12" id="lista">
+                </ul><!--cierre col-xs-12-->
             </div><!--cierre de row-->
 	    </div><!--cierre de cuadro-->
     </div><!--cierre de container-->
