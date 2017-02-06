@@ -1,28 +1,35 @@
-//  funcion principal que crea los elemnetos en el html:
+var listaTareas =[];
+
+// funcion principal:
+function onButtonClick(){
+    var inputMensaje = document.getElementById("mensaje").value;
+    listaTareas.push({nombre:inputMensaje,isDone:false});
+    drawTextList();
+    var inputMensaje = document.getElementById("mensaje").value="";
+}
+// funcion para crear elementos (nuevo método):
 function drawTextList(){
-    var input = document.getElementById("mensaje");
-    var valorInput = input.value;
-// nuevo metodo:
-    var listaTareas = [ {nombre: valorInput, isDone:false} ];
+   var lista = document.getElementById("lista");
+   lista.innerHTML = "";
+ 
+   for(var i in listaTareas){
+      var html = "<li> <input type='checkbox' onclick='strikethrough("+i+")' "+(listaTareas[i].isDone?"checked":"")+">"+"<span "+(listaTareas[i].isDone?"style='text-decoration: overline underline line-through'":"style='text-decoration:none'")+" id='new'>"+listaTareas[i].nombre+"</span></input>"+listaTareas[i].nombre+"<span onclick='deleteTasks("+i+")' class='glyphicon  glyphicon-trash , icon , pull-right'>" + "</span>" +"</li>"
+      lista.innerHTML += html;
+    }
+}
+// funcion para eliminar lista:
+function deleteTasks(_tarea){
+listaTareas.splice(_tarea, 1);
+   drawTextList();  
+}
+// funcion para tachar la tarea:
+function strikethrough(_var){
     var lista = document.getElementById("lista");
-    for(var i in listaTareas){
-        var html = "<li> <input type = 'checkbox' " + (listaTareas[i].isDone?"checked":"") +  ">" + 
-        listaTareas[i].nombre + "<span class='glyphicon  glyphicon-trash , icon , pull-right'>" + "</span>" +"</li>";
-        lista.innerHTML += html;
-    }
-    var valorInput = document.getElementById("mensaje").value="";
-    eliminarTarea();
+    if(listaTareas[_var].isDone == false){
+       listaTareas[_var].isDone=true;
+    }else{
+        listaTareas[_var].isDone=false;
+        lista.childNodes[_var].childNodes[1].style.textDecoration="none";
+   }
+   drawTextList();
 }
-// funcion para eliminar la tarea haciendo click al icono:
-function eliminarTarea(){
-    var eliminar = document.getElementsByClassName("icon");
-    for(var c = 0; c < eliminar.length; c++){
-        eliminar[c].onclick = function(){
-        var lista = this.parentElement;
-        lista.style.display = "none";
-       }
-    }
-}
-
-
-  
