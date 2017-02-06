@@ -1,7 +1,7 @@
 var listaTareas =[];
 
 // funcion principal:
-function onButtonClick(){
+function clickButton(){
     var inputMensaje = document.getElementById("mensaje").value;
     listaTareas.push({nombre:inputMensaje,isDone:false});
     drawTextList();
@@ -12,8 +12,8 @@ function drawTextList(){
    var lista = document.getElementById("lista");
    lista.innerHTML = "";
  
-   for(var i in listaTareas){
-      var html = "<li> <input type='checkbox' onclick='strikethrough("+i+")' "+(listaTareas[i].isDone?"checked":"")+">"+"<span "+(listaTareas[i].isDone?"style='text-decoration: overline underline line-through'":"style='text-decoration:none'")+" id='new'>"+listaTareas[i].nombre+"</span></input>"+listaTareas[i].nombre+"<span onclick='deleteTasks("+i+")' class='glyphicon  glyphicon-trash , icon , pull-right'>" + "</span>" +"</li>"
+   for(var c in listaTareas){
+      var html = "<li> <input type='checkbox' onclick='strikethrough("+c+")' "+(listaTareas[c].isDone?"checked":"")+">"+"<span "+(listaTareas[c].isDone?"style='text-decoration: overline underline line-through'":"style='text-decoration:none'")+" id='new'>"+listaTareas[c].nombre+"</span></input>"+"<span onclick='deleteTasks("+c+")' class='glyphicon  glyphicon-trash , icon , pull-right'>" + "</span>" +"</li>"
       lista.innerHTML += html;
     }
 }
