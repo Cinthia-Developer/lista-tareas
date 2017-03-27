@@ -1,6 +1,6 @@
-body{background-image: url("http://www.imagenesdefondo.net/wp-content/uploads/2015/11/chica-3d-en-un-paisaje-otonal.jpg"); background-repeat: no-repeat; color: white; font-family: cursive; font-size: 20px;}
+body{background-image: url(../image/fondo.jpg); background-repeat: no-repeat; color: white; font-family: cursive; font-size: 20px;}
 #titulo{background: rgba(38, 35, 35, 0.68); padding: 15px; text-align: center; font-size: 40px;}
-#mensaje{border: 3px solid white; height: 200px; width: 100%; border-radius: 20px;  padding: 20px; background: rgba(154, 32, 32, 0.61);}
+#mensaje{border: 3px solid white; height: 200px; width: 100%; border-radius: 20px;  padding: 20px; background: rgba(0, 0, 0, 0.63);}
 .error{font-size: 40px;}
 li{border: 2px solid black; padding: 10px; border-radius: 10px; margin-bottom: 10px; background: rgba(0, 0, 0, 0.49);}
-.icon{font-size: 25px; color: violet;}
+.icon{font-size: 25px; color: white;}
